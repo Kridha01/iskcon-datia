@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefefe;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #333;
+    padding: 2rem 0 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.2em;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background: rgba(255, 165, 0, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #FFA500;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000; /* Fallback if image fails */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.donate-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.donate-btn:hover {
+    background: #FFA500;
+}
+
+.krishna-banner {
+    background: #FFD700;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #FFA500;
+    font-size: 2.5em;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #FFD700;
+    margin: 10px auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
+    color: #FFA500;
+    margin-bottom: 15px;
+}
+
+.calendar {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.event {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #FFD700;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event h4 {
+    margin: 0 0 10px 0;
+    color: #FFA500;
+}
+
+.shloka {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #333;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.shloka h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.shloka p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 2em;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.seva-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.seva-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.seva-item:hover {
+    transform: translateY(-5px);
+}
+
+.seva-item img {
+    flex: 1;
+    height: 300px;
+    object-fit: cover;
+}
+
+.seva-item .seva-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.seva-item h3 {
+    color: #FFA500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.seva-item p {
+    margin: 0;
+    text-align: center;
+}
+
+.seva-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.seva-item h3 {
+    padding: 20px;
+    margin: 0;
+    color: #FFA500;
+    text-align: center;
+}
+
+.seva-item p {
+    padding: 0 20px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.bank-details {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.bank-details h3 {
+    color: #FFA500;
+    margin-bottom: 20px;
+}
+
+.bank-details p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+        max-width: 90%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .services-grid, .seva-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .seva-item {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .seva-item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .seva-item .seva-content {
+        text-align: center;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .shloka {
+        padding: 30px;
+    }
+
+    .shloka h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .service, .seva-item {
+        padding: 20px;
+    }
+}
+
+.donate-btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.donate-btn:hover {
+    background: #e55a00;
+}
