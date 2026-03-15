@@ -18,79 +18,31 @@ body {
 header {
     background: linear-gradient(135deg, #FFD700, #FFA500);
     color: #333;
-    padding: 2rem 0 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header .container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
 }
 
 header h1 {
-    margin: 0 0 1rem 0;
-    font-size: 2.2em;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    font-weight: 700;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    font-size: 1.8em;
+    color: #333;
 }
 
 nav ul li a {
     color: #333;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    position: relative;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #fff;
-    background: rgba(255, 165, 0, 0.8);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: #FFA500;
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
+    color: #FFA500;
 }
 
 .hero {
@@ -217,6 +169,7 @@ section h2::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    justify-content: center;
 }
 
 .service {
@@ -296,10 +249,10 @@ section h2::after {
 }
 
 .seva-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    align-items: center;
+    justify-content: center;
 }
 
 .seva-item {
@@ -308,40 +261,11 @@ section h2::after {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
-    display: flex;
-    width: 100%;
-    max-width: 1000px;
+    text-align: center;
 }
 
 .seva-item:hover {
     transform: translateY(-5px);
-}
-
-.seva-item img {
-    flex: 1;
-    height: 300px;
-    object-fit: cover;
-}
-
-.seva-item .seva-content {
-    flex: 1;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.seva-item h3 {
-    color: #FFA500;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.seva-item p {
-    margin: 0;
-    text-align: center;
 }
 
 .seva-item img {
@@ -443,20 +367,6 @@ footer p {
     .services-grid, .seva-grid {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .seva-item {
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    .seva-item img {
-        width: 100%;
-        height: 200px;
-    }
-
-    .seva-item .seva-content {
-        text-align: center;
     }
 
     .contact-info {
